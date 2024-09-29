@@ -1,0 +1,64 @@
+version: '3.4'
+
+services:
+  postgres.database:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: pass123
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  rabbitmq:
+    image: rabbitmq:management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+
+  worker.service:
+    image: ${DOCKER_REGISTRY-}workerservice
+    build:
+      context: .
+      dockerfile: Worker.Service/Dockerfile
+    depends_on:
+      - postgres.database
+      - rabbitmq
+
+  service01:
+    image: ${DOCKER_REGISTRY-}service01
+    build:
+      context: .
+      dockerfile: Service01/Dockerfile
+    depends_on:
+      - worker.service
+
+  service02:
+    image: ${DOCKER_REGISTRY-}service02
+    build:
+      context: .
+      dockerfile: Service02/Dockerfile
+    depends_on:
+      - worker.service
+
+  service03:
+    image: ${DOCKER_REGISTRY-}service03
+    build:
+      context: .
+      dockerfile: Service03/Dockerfile
+    depends_on:
+      - postgres.database
+    ports:         
+      - "5025:8080"
+
+volumes:
+  postgres_data:
+
+
+
+

@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "Worker.Jobs": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7255"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "httpPort": 31721,
+      "useSSL": false
+    }
+  }
+}

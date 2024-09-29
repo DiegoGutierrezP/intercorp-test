@@ -1,0 +1,6 @@
+@Service03_HostAddress = http://localhost:5025
+
+GET {{Service03_HostAddress}}/files-readed/
+Accept: application/json
+
+###
