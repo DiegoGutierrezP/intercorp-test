@@ -14,7 +14,27 @@ builder.Services.AddInfrastructureLayer(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors(options =>
+{
+    //options.AddPolicy("AllowSpecificOrigins", policy =>
+    //{
+    //    policy.WithOrigins("http://localhost:5173") // Permitir solo este origen
+    //          .AllowAnyHeader()
+    //          .AllowAnyMethod();
+    //});
+
+    options.AddPolicy("AllowAllOrigins", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+
+});
+
 var app = builder.Build();
+
+app.UseCors("AllowAllOrigins");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
