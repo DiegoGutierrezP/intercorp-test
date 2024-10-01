@@ -7,31 +7,36 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E6
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Worker", "Worker", "{A1EA3F87-3E5F-4E5D-AD8A-1B92EECD73DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worker.Domain", "Worker.Domain\Worker.Domain.csproj", "{CF669D10-3CC8-4206-B6F6-86D85532828B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Worker.Domain", "Worker.Domain\Worker.Domain.csproj", "{CF669D10-3CC8-4206-B6F6-86D85532828B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worker.Application", "Worker.Application\Worker.Application.csproj", "{7D16E150-9772-4F41-AE56-2756E05397FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Worker.Application", "Worker.Application\Worker.Application.csproj", "{7D16E150-9772-4F41-AE56-2756E05397FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worker.Infrastructure", "Worker.Infrastructure\Worker.Infrastructure.csproj", "{1F6D9538-25B7-4AF8-B64E-7110C4A14113}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Worker.Infrastructure", "Worker.Infrastructure\Worker.Infrastructure.csproj", "{1F6D9538-25B7-4AF8-B64E-7110C4A14113}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service01", "Service01", "{2FC8C42C-DB52-4E42-BE1D-988CEE5F4E79}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service02", "Service02", "{8C743D5F-4640-470A-B7B9-D938EC1F8F9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service01", "Service01\Service01.csproj", "{4A63099A-203A-4A4D-BEA3-56307A45555D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service01", "Service01\Service01.csproj", "{4A63099A-203A-4A4D-BEA3-56307A45555D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service02", "Service02\Service02.csproj", "{07290241-3745-4F25-B596-9781C49B2A96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service02", "Service02\Service02.csproj", "{07290241-3745-4F25-B596-9781C49B2A96}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service03", "Service03", "{CBB39B8B-1D58-4145-A6FB-4C0690746983}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service03", "Service03\Service03.csproj", "{8F0214A9-C4AA-4117-92E6-ECA65422CBAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service03", "Service03\Service03.csproj", "{8F0214A9-C4AA-4117-92E6-ECA65422CBAB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{C606E917-8BB3-4D41-94FF-2CC09E2010ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus.Messages", "EventBus.Messages\EventBus.Messages.csproj", "{51164F96-E08A-4FEB-9BCA-BCE091D5525F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.Messages", "EventBus.Messages\EventBus.Messages.csproj", "{51164F96-E08A-4FEB-9BCA-BCE091D5525F}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{7E690189-5FDE-47CD-BC90-D525AFEEAE1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worker.Service", "Worker.Service\Worker.Service.csproj", "{10A7D135-35E8-483C-B764-DE5E6485267A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Worker.Service", "Worker.Service\Worker.Service.csproj", "{10A7D135-35E8-483C-B764-DE5E6485267A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{69F3FA51-1E8D-4940-8493-00898147CDC9}"
+	ProjectSection(SolutionItems) = preProject
+		init.sql = init.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
