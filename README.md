@@ -16,39 +16,6 @@ Este es un proyecto de microservicios desarrollado en .NET 8 que utiliza RabbitM
    - **Username:** postgres
    - **Password:** pass123
 
-3. **Creación de Tablas**  
-   Después de conectarte a la base de datos, ejecuta los siguientes scripts para crear las tablas necesarias:
+### Estructura del proyecto
 
-   ```sql
-   CREATE TABLE "Activities" (
-       "Id" SERIAL PRIMARY KEY,
-       "Type" INT NOT NULL,  -- 1: leer archivo
-       "FileName" VARCHAR(255) NOT NULL,
-       "FileNumber" INT NOT NULL,
-       "Data" TEXT,
-       "Log" TEXT,
-       "Status" INT NOT NULL,  -- Suponiendo que ActivityStatus es un tipo INT
-       "CreatedAt" TIMESTAMP NOT NULL DEFAULT NOW(),
-       "UpdatedAt" TIMESTAMP NOT NULL DEFAULT NOW()
-   );
-
-   CREATE TABLE "FileInformations" (
-       "Id" SERIAL PRIMARY KEY,
-       "Random" VARCHAR(255),
-       "RandomFloat" DECIMAL,
-       "Bool" BOOLEAN NOT NULL,
-       "Date" VARCHAR(50),  -- Considera usar un tipo de fecha adecuado si es necesario
-       "RegEx" VARCHAR(255),
-       "FileName" VARCHAR(255),
-       "FileNumber" INTEGER,
-       "Enum" VARCHAR(255),
-       "Elt" JSONB,
-       "Person" JSONB,
-       "LastUpdated" VARCHAR(255),
-       "LastModified" VARCHAR(255),
-       "CreatedAt" TIMESTAMP NOT NULL DEFAULT NOW(),
-       "UpdatedAt" TIMESTAMP NOT NULL DEFAULT NOW()
-   );
-
-3. **Reconstruir el docker compose**      
-   Después de crear las tablas, ejecuta docker-compose build para reconstruir los servicios.
+![Descripción de la imagen](./proyect_structure.PNG)
